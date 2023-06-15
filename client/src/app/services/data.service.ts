@@ -25,8 +25,16 @@ export class DataService {
   }
 
   deleteById(id: string) {
-  console.log(this.url + '/api/movies/' + id)
-    return this.http.delete(this.url + '/api/movies/' + id);
+    return new Promise<boolean>((resolve, reject) => {
+       this.http.delete(this.url + '/api/movies/' + id).subscribe((response) => {
+        if (response) {
+         resolve(true);
+        } else {
+         resolve(false);
+        }
+       });
+      });
+
   }
 
 }

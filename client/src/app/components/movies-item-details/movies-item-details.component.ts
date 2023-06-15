@@ -43,7 +43,7 @@ export class MoviesItemDetailsComponent implements OnInit {
     });
     this.dataService.deleteById(id);
     this.router.navigate(['/']);
-    }
+  }
 
     editMovie() {
     let id: string = '';
