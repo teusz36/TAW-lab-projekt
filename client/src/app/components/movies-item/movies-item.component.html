@@ -1,0 +1,9 @@
+<div class="card bg-dark" style="width: 18rem;" [routerLink]="['/movies/detail/' + id]">
+  <movies-item-image [image]="image"></movies-item-image>
+  <div class="card-body">
+    <p class="card-text" style="width: 100%; text-align: center; ">
+      <movies-item-title class="text-light" [title]="title" [id]="id"></movies-item-title>
+    </p>
+
+  </div>
+</div>

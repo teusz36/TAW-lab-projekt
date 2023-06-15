@@ -1,0 +1,28 @@
+<div class="container">
+  <h1 class="entry-title text-white"><span>Dodaj film</span></h1><hr>
+  <form action="post" autocomplete="off" method="POST">
+    <div class="input-group" style="margin-bottom: 15px">
+      <input [(ngModel)]="newMovie.title" type="text" class="form-control"
+             name="title" placeholder="Tytuł" title="Tytuł">
+    </div>
+
+    <div class="input-group" style="margin-bottom: 15px">
+      <input [(ngModel)]="newMovie.year" type="text" class="form-control"
+             name="title" placeholder="Rok" title="Rok">
+    </div>
+
+    <div class="input-group" style="margin-bottom: 15px">
+      <input [(ngModel)]="newMovie.image" type="text" class="form-control"
+             name="title" placeholder="URL plakatu" title="Image">
+    </div>
+
+    <div class="input-group" style="margin-bottom: 15px; height: 200px">
+      <input [(ngModel)]="newMovie.description" type="text" class="form-control"
+             name="title" placeholder="Opis" title="Opis">
+    </div>
+
+    <button (click)="addMovie()" class="btn btn-light" type="submit" title="Dodaj film">
+      Dodaj film
+    </button>
+  </form>
+</div>
